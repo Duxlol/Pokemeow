@@ -1,0 +1,6 @@
+cv2
+pyautogui
+time
+PIL
+configparser
+pytesseract

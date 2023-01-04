@@ -1,5 +1,4 @@
 import pyautogui
-import json
 from PIL import Image
 from configparser import ConfigParser
 from configparser import RawConfigParser
