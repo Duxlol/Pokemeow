@@ -7,8 +7,6 @@ import time
 #copy ;p
 copy.copy()
 
-# just for a new commit
-
 
 while True:
     #open inv and check for items + put them in config
