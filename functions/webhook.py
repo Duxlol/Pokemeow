@@ -1,7 +1,7 @@
 import pyautogui
 from discordwebhook import Discord
-from configparser import ConfigParser
-config = ConfigParser()
+from configparser import ConfigParser, RawConfigParser
+config = RawConfigParser()
 
 #load webhook url from config
 config.read('config.ini')
