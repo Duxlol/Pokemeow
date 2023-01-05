@@ -100,14 +100,14 @@ def items():
             config.write(f)
 
     #egg
-    im9 = pyautogui.screenshot(r'D:\coding\pokemeow\items\egg.png', region=(570,683, 16, 14))
+    im9 = pyautogui.screenshot(r'D:\coding\pokemeow\items\egg.png', region=(570,683, 10, 11))
     im10 = cv2.imread(r"D:\coding\pokemeow\items\egg.png")
 
     (h5, w5) = im8.shape[:2]
     im10 = cv2.resize(im10, (w5*3, h5*3))
     gry5 = cv2.cvtColor(im10, cv2.COLOR_BGR2GRAY)
     thr5 = cv2.threshold(gry5, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)[1]
-    amount5 = tess.image_to_string(thr5, config='--psm 7 -c tessedit_char_whitelist=0123456789')    
+    amount5 = tess.image_to_string(thr5, config='--psm 10 -c tessedit_char_whitelist=0123456789')    
     print(amount5, "egg(s)")
 
     config.set('CONFIG', 'egg', amount5)

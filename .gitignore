@@ -3,9 +3,5 @@ __pycache__/
 captcha.png
 color.png
 screen.png
-items/egg.png/
-items/pokeball.png/
-items/greatball.png/
-items/premierball.png/
-items/ultraball.png/
+items/
 config.ini

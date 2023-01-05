@@ -1,11 +1,16 @@
+import time
 import functions.catch as catch
 import functions.copy as copy
 import functions.items as items
 import functions.egg as egg
-import time
+import functions.directory as dir
+
 
 #copy ;p
 copy.copy()
+
+#make items folder
+dir.mkdir()
 
 
 while True:
