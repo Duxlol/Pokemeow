@@ -9,7 +9,7 @@ mouse = MouseController()
 config = configparser.ConfigParser()
 
 def findegg():
-    pos = imagesearch("D:\coding\pokemeow\images\egg.png")
+    pos = imagesearch(".\images\egg.png")
     if pos[0] != -1:
         print("position : ", pos[0], pos[1])
         print("Egg is ready to hatch!")

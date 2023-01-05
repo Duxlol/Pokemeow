@@ -30,9 +30,9 @@ def items():
 
     #take screenshot of each ball individually
     #pokeball
-    im1 = pyautogui.screenshot(r'D:\coding\pokemeow\items\pokeball.png', region=(419,627, 25, 18))
+    im1 = pyautogui.screenshot(r'.\items\pokeball.png', region=(419,627, 25, 18))
     
-    im2 = cv2.imread(r"D:\coding\pokemeow\items\pokeball.png")
+    im2 = cv2.imread(r".\items\pokeball.png")
 
     (h, w) = im2.shape[:2]
     im2 = cv2.resize(im2, (w*3, h*3))
@@ -48,8 +48,8 @@ def items():
 
 
     #greatball
-    im3 = pyautogui.screenshot(r'D:\coding\pokemeow\items\greatball.png', region=(419,647, 18, 13))
-    im4 = cv2.imread(r"D:\coding\pokemeow\items\greatball.png")
+    im3 = pyautogui.screenshot(r'.\items\greatball.png', region=(419,647, 18, 13))
+    im4 = cv2.imread(r".\items\greatball.png")
     
     (h2, w2) = im4.shape[:2]
     im4 = cv2.resize(im4, (w2*3, h2*3))
@@ -64,8 +64,8 @@ def items():
 
     
     #ultraball
-    im5 = pyautogui.screenshot(r'D:\coding\pokemeow\items\ultraball.png', region=(419,665, 11, 13))
-    im6 = cv2.imread(r"D:\coding\pokemeow\items\ultraball.png")
+    im5 = pyautogui.screenshot(r'.\items\ultraball.png', region=(419,665, 11, 13))
+    im6 = cv2.imread(r".\items\ultraball.png")
 
     (h3, w3) = im6.shape[:2]
     im6 = cv2.resize(im6, (w3*3, h3*3))
@@ -81,8 +81,8 @@ def items():
 
 
     #premierball
-    im7 = pyautogui.screenshot(r'D:\coding\pokemeow\items\premierball.png', region=(569,485, 9, 14))
-    im8 = cv2.imread(r"D:\coding\pokemeow\items\premierball.png")
+    im7 = pyautogui.screenshot(r'.\items\premierball.png', region=(569,485, 9, 14))
+    im8 = cv2.imread(r".\items\premierball.png")
     
     (h4, w4) = im8.shape[:2]
     im8 = cv2.resize(im8, (w4*3, h4*3))
@@ -100,8 +100,8 @@ def items():
             config.write(f)
 
     #egg
-    im9 = pyautogui.screenshot(r'D:\coding\pokemeow\items\egg.png', region=(570,683, 10, 11))
-    im10 = cv2.imread(r"D:\coding\pokemeow\items\egg.png")
+    im9 = pyautogui.screenshot(r'.\items\egg.png', region=(570,683, 10, 11))
+    im10 = cv2.imread(r".\items\egg.png")
 
     (h5, w5) = im8.shape[:2]
     im10 = cv2.resize(im10, (w5*3, h5*3))

@@ -35,12 +35,12 @@ def catch():
     # open all colors
     im2 = Image.open('color.png')
 
-    im3 = Image.open(r"D:\coding\pokemeow\images\common.png")
-    im4 = Image.open(r"D:\coding\pokemeow\images\uncommon.png")
-    im5 = Image.open(r"D:\coding\pokemeow\images\rare.png")
-    im6 = Image.open(r"D:\coding\pokemeow\images\superrare.png")
-    im7 = Image.open(r"D:\coding\pokemeow\images\legendary.png")
-    im8 = Image.open(r"D:\coding\pokemeow\images\shiny.png")
+    im3 = Image.open(r".\images\common.png")
+    im4 = Image.open(r".\images\uncommon.png")
+    im5 = Image.open(r".\images\rare.png")
+    im6 = Image.open(r".\images\superrare.png")
+    im7 = Image.open(r".\images\legendary.png")
+    im8 = Image.open(r".\images\shiny.png")
 
     # check which one matches
 

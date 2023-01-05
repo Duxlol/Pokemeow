@@ -12,7 +12,7 @@ keyboard = KeyboardController()
 mouse = MouseController()
 
 def find():
-    pos = imagesearch("D:\coding\pokemeow\images\captcha.png")
+    pos = imagesearch(".\images\captcha.png")
     if pos[0] != -1:
         print("position : ", pos[0], pos[1])
         
@@ -23,11 +23,11 @@ def find():
         time.sleep(2)
 
         #take screenshot of image
-        im1 = pyautogui.screenshot(r'D:\coding\pokemeow\captcha\solver.png', region=(890, 492, 140, 57))
+        im1 = pyautogui.screenshot(r'.\captcha\solver.png', region=(890, 492, 140, 57))
         print("Image screenshot taken") 
        
         #open, transform and type the solving
-        im2 = cv2.imread(r"D:\coding\pokemeow\captcha\solver.png")
+        im2 = cv2.imread(r".\captcha\solver.png")
 
         (h, w) = im2.shape[:2]
         im2 = cv2.resize(im2, (w*3, h*3))
