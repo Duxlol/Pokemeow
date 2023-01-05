@@ -1,6 +1,7 @@
-cv2
+python-imagesearch
 pyautogui
-time
-PIL
+Pillow
 configparser
 pytesseract
+discordwebhook
+opencv-python
