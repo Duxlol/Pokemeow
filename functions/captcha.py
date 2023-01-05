@@ -1,12 +1,19 @@
 from PIL import Image
 import pyautogui
 import cv2
-import time
 import functions.webhook as webhook
 from pytesseract import pytesseract as tess
 from python_imagesearch.imagesearch import imagesearch
 from pynput.keyboard import Key, Controller as KeyboardController
 from pynput.mouse import Button, Controller as MouseController
+import customtkinter as ctk
+import tkinter as tk
+root = ctk.CTk()
+
+def tksleep(self, time:float) -> None:
+    self.after(int(time*1000), self.quit)
+    self.mainloop()
+tk.Misc.tksleep = tksleep 
 
 keyboard = KeyboardController()
 mouse = MouseController()
@@ -20,7 +27,7 @@ def find():
         mouse.position = (462, 806)
         mouse.press(Button.left)
         mouse.release(Button.left)
-        time.sleep(2)
+        root.tksleep(2)
 
         #take screenshot of image
         im1 = pyautogui.screenshot(r'.\captcha\solver.png', region=(890, 492, 140, 57))

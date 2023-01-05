@@ -4,12 +4,18 @@ from configparser import ConfigParser
 from configparser import RawConfigParser
 from pytesseract import pytesseract as tess
 import cv2
+import customtkinter as ctk
+import tkinter as tk
+root = ctk.CTk()
 
+def tksleep(self, time:float) -> None:
+    self.after(int(time*1000), self.quit)
+    self.mainloop()
+tk.Misc.tksleep = tksleep 
 config = RawConfigParser()
 
 from pynput.keyboard import Key, Controller as KeyboardController
 from pynput.mouse import Button, Controller as MouseController
-import time
 
 keyboard = KeyboardController()
 mouse = MouseController()
@@ -20,17 +26,22 @@ def items():
     mouse.position = (400, 990)
     mouse.press(Button.left)
     mouse.release(Button.left)
-    time.sleep(0.5)
+    root.tksleep(0.5)
+    #move and click on discord
+    mouse.position = (400, 990)
+    mouse.press(Button.left)
+    mouse.release(Button.left)
+    root.tksleep(0.5)
     
     #type ;inv
     keyboard.type(";inv")
     keyboard.press(Key.enter)
     keyboard.release(Key.enter)
-    time.sleep(2)
+    root.tksleep(2)
 
     #take screenshot of each ball individually
     #pokeball
-    im1 = pyautogui.screenshot(r'.\items\pokeball.png', region=(419,627, 25, 18))
+    pyautogui.screenshot(r'.\items\pokeball.png', region=(419,627, 25, 18))
     
     im2 = cv2.imread(r".\items\pokeball.png")
 
@@ -126,7 +137,7 @@ def item_amount():
         keyboard.type(";shop buy pb 12")
         keyboard.press(Key.enter)
         keyboard.release(Key.enter)
-        time.sleep(1)
+        root.tksleep(1)
 
     #GREATBALLS
     if int(greatballs) <= 10:
@@ -134,18 +145,18 @@ def item_amount():
         keyboard.type(";shop buy gb 10")
         keyboard.press(Key.enter)
         keyboard.release(Key.enter)
-        time.sleep(1)
+        root.tksleep(1)
     #ULTRABALLS
     if int(ultraballs) <= 2:
         print("Buying ultraballs because there's less than 2")
         keyboard.type(";shop buy ub 3")
         keyboard.press(Key.enter)
         keyboard.release(Key.enter)
-        time.sleep(1)
+        root.tksleep(1)
     #PREMIERBALLS
     if int(ultraballs) <= 0:
         print("Buying premierballs because there's less than 1")
         keyboard.type(";event buy 2")
         keyboard.press(Key.enter)
         keyboard.release(Key.enter)
-        time.sleep(1)
+        root.tksleep(1)
