@@ -2,10 +2,16 @@ import tkinter as tk
 import customtkinter as ctk
 import sys
 import main
-
+root = ctk.CTkToplevel()
 # --- functions ---
 def exit():
     sys.exit
+
+def tksleep(self, time:float) -> None:
+    self.after(int(time*1000), self.quit)
+    self.mainloop()
+def sleep():
+    root.tksleep()
     
 # --- classes ---
 
@@ -24,7 +30,6 @@ class Redirect():
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("dark-blue")
 
-root = ctk.CTkToplevel()
 root.geometry("500x350")
 root.iconbitmap(r"app.ico")
 root.title('dux<3#0767')
