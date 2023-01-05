@@ -13,7 +13,8 @@ Download required packages with:
 pip install -r requirements.txt
 ```
 Create your own webhook on Discord and add it in the **config.ini** file like this:
-```[CONFIG]
+```
+[CONFIG]
 webhook = <your webhook link>
 ```
 Edit click positions within code to have the best result.
