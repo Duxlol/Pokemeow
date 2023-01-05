@@ -1,7 +1,7 @@
 # Pokemeow
 Unfinished bot to automate the discord bot called pokemeow
 
-Download python [here](https://www.python.org/downloads.
+Download python [here](https://www.python.org/downloads).
 
 Download pip with:
 ```
