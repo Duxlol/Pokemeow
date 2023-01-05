@@ -1,12 +1,12 @@
 import time
 from python_imagesearch.imagesearch import imagesearch
-from configparser import RawConfigParser
+import configparser
 from pynput.keyboard import Key, Controller as KeyboardController
 from pynput.mouse import Button, Controller as MouseController
 
 keyboard = KeyboardController()
 mouse = MouseController()
-config = RawConfigParser()
+config = configparser.ConfigParser()
 
 def findegg():
     pos = imagesearch("D:\coding\pokemeow\images\egg.png")
@@ -17,8 +17,13 @@ def findegg():
         keyboard.type(";egg hatch")
         keyboard.press(Key.enter)
         keyboard.release(Key.enter)
+        time.sleep(7)
 
         #check if there's eggs in inventory
-        amount = config['EGG']['egg']
-        if int(amount) >= 1:
+        config.read('config.ini')
+        amt = config['CONFIG']['egg']
+        if int(amt) >= 1:
             keyboard.type(";egg hold")
+            keyboard.press(Key.enter)
+            keyboard.release(Key.enter)
+            time.sleep(2)

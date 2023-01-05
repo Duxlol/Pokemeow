@@ -48,7 +48,7 @@ def items():
 
 
     #greatball
-    im3 = pyautogui.screenshot(r'D:\coding\pokemeow\items\greatball.png', region=(419,647, 18, 12))
+    im3 = pyautogui.screenshot(r'D:\coding\pokemeow\items\greatball.png', region=(419,647, 18, 13))
     im4 = cv2.imread(r"D:\coding\pokemeow\items\greatball.png")
     
     (h2, w2) = im4.shape[:2]
@@ -64,7 +64,7 @@ def items():
 
     
     #ultraball
-    im5 = pyautogui.screenshot(r'D:\coding\pokemeow\items\ultraball.png', region=(419,665, 10, 12))
+    im5 = pyautogui.screenshot(r'D:\coding\pokemeow\items\ultraball.png', region=(419,665, 11, 13))
     im6 = cv2.imread(r"D:\coding\pokemeow\items\ultraball.png")
 
     (h3, w3) = im6.shape[:2]
@@ -110,7 +110,7 @@ def items():
     amount5 = tess.image_to_string(thr5, config='--psm 7 -c tessedit_char_whitelist=0123456789')    
     print(amount5, "egg(s)")
 
-    config.set('EGG', 'egg', amount5)
+    config.set('CONFIG', 'egg', amount5)
     with open('config.ini', 'w') as f:
         config.write(f)
 
