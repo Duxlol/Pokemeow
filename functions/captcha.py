@@ -6,7 +6,7 @@ from pytesseract import pytesseract as tess
 from python_imagesearch.imagesearch import imagesearch
 from pynput.keyboard import Key, Controller as KeyboardController
 from pynput.mouse import Button, Controller as MouseController
-import gui
+from gui import tksleep
 keyboard = KeyboardController()
 mouse = MouseController()
 
@@ -19,7 +19,7 @@ def find():
         mouse.position = (462, 806)
         mouse.press(Button.left)
         mouse.release(Button.left)
-        gui.sleep(2)
+        tksleep(2)
 
         #take screenshot of image
         im1 = pyautogui.screenshot(r'.\captcha\solver.png', region=(890, 492, 140, 57))

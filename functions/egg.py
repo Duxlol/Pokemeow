@@ -2,7 +2,7 @@ from python_imagesearch.imagesearch import imagesearch
 import configparser
 from pynput.keyboard import Key, Controller as KeyboardController
 from pynput.mouse import Button, Controller as MouseController
-import gui
+from gui import tksleep
 
 keyboard = KeyboardController()
 mouse = MouseController()
@@ -13,11 +13,11 @@ def findegg():
     if pos[0] != -1:
         print("position : ", pos[0], pos[1])
         print("Egg is ready to hatch!")
-        gui.sleep(1)
+        tksleep(1)
         keyboard.type(";egg hatch")
         keyboard.press(Key.enter)
         keyboard.release(Key.enter)
-        gui.sleep(7)
+        tksleep(7)
 
         #check if there's eggs in inventory
         config.read('config.ini')
@@ -26,4 +26,4 @@ def findegg():
             keyboard.type(";egg hold")
             keyboard.press(Key.enter)
             keyboard.release(Key.enter)
-            gui.sleep(2)
+            tksleep(2)

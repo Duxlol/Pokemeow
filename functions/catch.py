@@ -4,7 +4,7 @@ from pynput.keyboard import Key, Controller as KeyboardController
 from pynput.mouse import Button, Controller as MouseController
 import functions.webhook as webhook
 import functions.captcha as captcha
-import gui
+from gui import tksleep
 
 keyboard = KeyboardController()
 mouse = MouseController()
@@ -17,14 +17,14 @@ def catch():
     mouse.position = (400, 990)
     mouse.press(Button.left)
     mouse.release(Button.left)
-    gui.sleep(0.5)
+    tksleep(0.5)
     with keyboard.pressed(Key.ctrl):
         keyboard.press('v')
         keyboard.release('v')
     keyboard.press(Key.enter)
     keyboard.release(Key.enter)
 
-    gui.sleep(2)
+    tksleep(2)
     
     #find captcha
     captcha.find()
@@ -96,4 +96,4 @@ def catch():
         print("Used Premierball")
         webhook.webhook()
 
-    gui.sleep(8)
+    tksleep(8)
