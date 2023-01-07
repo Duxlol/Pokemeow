@@ -5,3 +5,5 @@ configparser
 pytesseract
 discordwebhook
 opencv-python
+customtkinter
+pyperclip
