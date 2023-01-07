@@ -19,7 +19,7 @@ def items():
     mouse.position = (400, 990)
     mouse.press(Button.left)
     mouse.release(Button.left)
-    tksleep(((1,1)))
+    tksleep()
     #move and click on discord
     mouse.position = (400, 990)
     mouse.press(Button.left)
