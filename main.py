@@ -7,7 +7,7 @@ import functions.copy as copy
 import functions.items as items
 import functions.egg as egg
 import functions.directory as dir
-from gui import tksleep
+from tksleep import tksleep
 
 root = ctk.CTk()
 

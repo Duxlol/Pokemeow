@@ -6,7 +6,7 @@ from pytesseract import pytesseract as tess
 from python_imagesearch.imagesearch import imagesearch
 from pynput.keyboard import Key, Controller as KeyboardController
 from pynput.mouse import Button, Controller as MouseController
-from gui import tksleep
+from tksleep import tksleep
 keyboard = KeyboardController()
 mouse = MouseController()
 

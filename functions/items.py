@@ -4,7 +4,7 @@ from configparser import ConfigParser
 from configparser import RawConfigParser
 from pytesseract import pytesseract as tess
 import cv2
-from gui import tksleep
+from tksleep import tksleep
 config = RawConfigParser()
 
 from pynput.keyboard import Key, Controller as KeyboardController
