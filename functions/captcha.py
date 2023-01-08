@@ -19,7 +19,7 @@ def find():
         mouse.position = (462, 806)
         mouse.press(Button.left)
         mouse.release(Button.left)
-        tksleep(2)
+        tksleep.tksleep(2)
 
         #take screenshot of image
         im1 = pyautogui.screenshot(r'.\captcha\solver.png', region=(890, 492, 140, 57))

@@ -13,11 +13,11 @@ def findegg():
     if pos[0] != -1:
         print("position : ", pos[0], pos[1])
         print("Egg is ready to hatch!")
-        tksleep(1)
+        tksleep.tksleep(1)
         keyboard.type(";egg hatch")
         keyboard.press(Key.enter)
         keyboard.release(Key.enter)
-        tksleep(7)
+        tksleep.tksleep(7)
 
         #check if there's eggs in inventory
         config.read('config.ini')
@@ -26,4 +26,4 @@ def findegg():
             keyboard.type(";egg hold")
             keyboard.press(Key.enter)
             keyboard.release(Key.enter)
-            tksleep(2)
+            tksleep.tksleep(2)

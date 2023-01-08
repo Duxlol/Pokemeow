@@ -7,13 +7,9 @@ import functions.copy as copy
 import functions.items as items
 import functions.egg as egg
 import functions.directory as dir
+from gui import tksleep
 
 root = ctk.CTk()
-
-def tksleep(self, time:float) -> None:
-        self.after(int(time*1000), self.quit)
-        self.mainloop()
-tk.Misc.tksleep = tksleep
 
 def start():  
     #copy ;p
@@ -31,9 +27,9 @@ def start():
             #open inv and check for items + put them in config
             print("opened inventory")
             items.items()
-            root.tksleep(2)
+            tksleep.tksleep(2)
             items.item_amount()
-            root.tksleep(2)
+            tksleep.tksleep(2)
 
             for i in range (10):  
                 print("catching pokemon")
@@ -58,7 +54,7 @@ class Redirect():
 
     def write(self, text):
         self.widget.insert('end', text)
-        #self.widget.see('end') # autoscroll
+        self.widget.see('end') # autoscroll
     def flush(self):
         pass
     

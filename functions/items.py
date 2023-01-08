@@ -19,18 +19,18 @@ def items():
     mouse.position = (400, 990)
     mouse.press(Button.left)
     mouse.release(Button.left)
-    tksleep()
+    tksleep.tksleep(1)
     #move and click on discord
     mouse.position = (400, 990)
     mouse.press(Button.left)
     mouse.release(Button.left)
-    tksleep(0.5)
+    tksleep.tksleep(0.5)
     
     #type ;inv
     keyboard.type(";inv")
     keyboard.press(Key.enter)
     keyboard.release(Key.enter)
-    tksleep(2)
+    tksleep.tksleep(2)
 
     #take screenshot of each ball individually
     #pokeball
@@ -130,7 +130,7 @@ def item_amount():
         keyboard.type(";shop buy pb 12")
         keyboard.press(Key.enter)
         keyboard.release(Key.enter)
-        tksleep(1)
+        tksleep.tksleep(1)
 
     #GREATBALLS
     if int(greatballs) <= 10:
@@ -138,18 +138,18 @@ def item_amount():
         keyboard.type(";shop buy gb 10")
         keyboard.press(Key.enter)
         keyboard.release(Key.enter)
-        tksleep(1)
+        tksleep.tksleep(1)
     #ULTRABALLS
     if int(ultraballs) <= 2:
         print("Buying ultraballs because there's less than 2")
         keyboard.type(";shop buy ub 3")
         keyboard.press(Key.enter)
         keyboard.release(Key.enter)
-        tksleep(1)
+        tksleep.tksleep(1)
     #PREMIERBALLS
     if int(ultraballs) <= 0:
         print("Buying premierballs because there's less than 1")
         keyboard.type(";event buy 2")
         keyboard.press(Key.enter)
         keyboard.release(Key.enter)
-        tksleep(1)
+        tksleep.tksleep(1)

@@ -17,14 +17,14 @@ def catch():
     mouse.position = (400, 990)
     mouse.press(Button.left)
     mouse.release(Button.left)
-    tksleep(0.5)
+    tksleep.tksleep(0.5)
     with keyboard.pressed(Key.ctrl):
         keyboard.press('v')
         keyboard.release('v')
     keyboard.press(Key.enter)
     keyboard.release(Key.enter)
 
-    tksleep(2)
+    tksleep.tksleep(2)
     
     #find captcha
     captcha.find()
@@ -96,4 +96,4 @@ def catch():
         print("Used Premierball")
         webhook.webhook()
 
-    tksleep(8)
+    tksleep.tksleep(8)
