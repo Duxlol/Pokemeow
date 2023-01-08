@@ -38,9 +38,9 @@ path = os.path.join(parent_dir, directory)
 
 
 
-def tksleep(self, time:float) -> None:
-        self.after(int(time*1000), self.quit)
-        self.mainloop()
+def tksleep(rppt, time:float) -> None:
+        root.after(int(time*1000), root.quit)
+        root.mainloop()
 tk.Misc.tksleep = tksleep
 root = ctk.CTk()
 
