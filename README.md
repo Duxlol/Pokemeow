@@ -1,7 +1,7 @@
 # Pokemeow
 Unfinished bot to automate the discord bot called pokemeow
 
-! ONLY RUN START.PY , OTHER FILES WILL NOT WORK, ESPECIALLY NOT MAIN.PY.
+! ONLY RUN START.PY OR MAIN.PY, OTHER FILES WILL NOT WORK!
 
 Download python [here](https://www.python.org/downloads).
 
