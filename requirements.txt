@@ -1,9 +1,7 @@
-python-imagesearch
+customtkinter
 pyautogui
-Pillow
-configparser
-pytesseract
+pillow
 discordwebhook
 opencv-python
-customtkinter
-pyperclip
+pytesseract
+python-imagesearch
