@@ -5,6 +5,7 @@ Unfinished bot to automate the discord bot called pokemeow
 
 Download python [here](https://www.python.org/downloads).
 
+Download tesseract-ocr [here](https://github.com/UB-Mannheim/tesseract/wiki)
 Download pip with:
 ```
 py -m ensurepip --upgrade
